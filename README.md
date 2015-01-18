@@ -22,7 +22,7 @@ $ npm install wx-connect
 ## 功能特性
 
  * 支持微信消息安全验证
- * 支持处理用户发送的文本消息
+ * 支持处理用户发送的文本、图片、语音、地理位置、链接消息
  * 支持处理用户发送的地理位置、自定义菜单点击、关注及取消关注事件
  * 支持回复文本、图文、语音、视频、音乐消息
  * 对消息和事件的处理采用中间件方式，结构清晰，扩展灵活
@@ -98,25 +98,25 @@ res.news([{title: '标题', description: '描述', picUrl: '图片URL', url: '�
 ### 地理位置上报事件处理
 
 ```js
-app.location ＝ function(req, res, next) {}
+app.onLocation ＝ function(req, res, next) {}
 ```
 
 ### 定义菜单点击事件处理
 
 ```js
-app.menu ＝ function(req, res, next) {}
+app.onClick ＝ function(req, res, next) {}
 ```
 
 ### 用户关注事件处理
 
 ```js
-app.subscribe ＝ function(req, res, next) {}
+app.onSubscribe ＝ function(req, res, next) {}
 ```
 
 ### 用户取消关注事件处理
 
 ```js
-app.unsubscribe ＝ function(req, res, next) {}
+app.onUnsubscribe ＝ function(req, res, next) {}
 ```
 
 ### 启动应用
